@@ -237,7 +237,61 @@
                                                 Here's where most cost estimates fall apart. Building a production-ready ML serving system isn't just about spinning up an EC2 instance and calling it a day. <strong class="font-medium text-slate-800 dark:text-slate-100">The operational complexity grows exponentially with requirements</strong>.
                                             </p>
                                             <p>
-                                                A senior ML engineer costs $150-200K annually. Factor in benefits, and you're looking at $200-250K total compensation. Even a modest 3-month project to build proper infrastructure represents $50-60K in engineering costs - before considering ongoing maintenance.
+                                                Let's talk real numbers. Engineering salaries have grown significantly, especially for AI/ML talent:
+                                            </p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Current Market Rates for ML Engineers</h3>
+                                            <ul class="list-disc list-inside space-y-2 text-slate-500 dark:text-slate-400">
+                                                <li><strong class="font-medium text-slate-800 dark:text-slate-100">Junior Level (0-2 years)</strong>: $120K base salary (~$150K total comp)</li>
+                                                <li><strong class="font-medium text-slate-800 dark:text-slate-100">Mid Level (3-5 years)</strong>: $150K-180K base salary (~$200-230K total comp)</li>
+                                                <li><strong class="font-medium text-slate-800 dark:text-slate-100">Principal Level (6+ years)</strong>: $220K-250K base salary (~$300-350K total comp)</li>
+                                            </ul>
+                                            <p>
+                                                Even with a mid-level engineer at $180K total compensation, a month-long project costs approximately <strong class="font-medium text-slate-800 dark:text-slate-100">$15,000 in pure labor costs</strong>. But here's the kicker - infrastructure projects rarely take just one month.
+                                            </p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Build vs Buy: The Real Math</h3>
+                                            <p>
+                                                Let's compare what $15,000 gets you with OpenAI's API versus building your own infrastructure:
+                                            </p>
+                                        </div>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-sm border border-slate-200 dark:border-slate-700">
+                                                <thead>
+                                                    <tr class="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                                                        <th class="text-left p-3 font-medium text-slate-800 dark:text-slate-100">Scenario</th>
+                                                        <th class="text-left p-3 font-medium text-slate-800 dark:text-slate-100">Cost</th>
+                                                        <th class="text-left p-3 font-medium text-slate-800 dark:text-slate-100">What You Get</th>
+                                                        <th class="text-left p-3 font-medium text-slate-800 dark:text-slate-100">Timeline</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-slate-500 dark:text-slate-400">
+                                                    <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                        <td class="p-3 font-medium">OpenAI API Usage</td>
+                                                        <td class="p-3">$15,000</td>
+                                                        <td class="p-3">~500K GPT-4 requests (3K tokens avg)<br/>Production ready immediately<br/>Auto-scaling, monitoring included</td>
+                                                        <td class="p-3">Day 1</td>
+                                                    </tr>
+                                                    <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                        <td class="p-3 font-medium">Self-Hosted (1 month)</td>
+                                                        <td class="p-3">$15,000</td>
+                                                        <td class="p-3">Basic FastAPI + EC2 setup<br/>Minimal monitoring<br/>No redundancy or scaling</td>
+                                                        <td class="p-3">Month 1</td>
+                                                    </tr>
+                                                    <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                        <td class="p-3 font-medium">Production-Ready Self-Hosted</td>
+                                                        <td class="p-3">$45,000+</td>
+                                                        <td class="p-3">Full monitoring, scaling, redundancy<br/>Usage tracking, rate limiting<br/>Security, compliance ready</td>
+                                                        <td class="p-3">3-4 months</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <p>
+                                                The table makes it clear: <strong class="font-medium text-slate-800 dark:text-slate-100">$15K of OpenAI API usage delivers more immediate business value than $15K of engineering time</strong>. You'd need to process millions of requests monthly before self-hosting becomes economically viable.
                                             </p>
                                         </div>
                                         <div class="space-y-4">
