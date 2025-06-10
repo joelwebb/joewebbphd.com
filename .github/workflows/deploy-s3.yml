@@ -35,15 +35,10 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             if [ -f "$file" ]; then
               echo "Uploading $file to S3"
-              aws s3 cp "$file" "s3://your-bucket-name/$file" --cache-control "max-age=31536000"
+              aws s3 cp "$file" "s3://joewebbphd.com/$file" --cache-control "max-age=31536000"
             fi
           done
         else
           echo "No files changed"
         fi
-    
-    - name: Sync all files on first deploy
-      if: github.event_name == 'push' && github.event.before == '0000000000000000000000000000000000000000'
-      run: |
-        echo "First deploy - syncing all files"
-        aws s3 sync . s3://your-bucket-name --delete --cache-control "max-age=31536000" --exclude ".git/*" --exclude ".github/*" --exclude "node_modules/*" --exclude "*.md"
+  
