@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block title %}Joe Webb, PhD - Home{% endblock %}
+
+{% block content %}
+<section>
+    <!-- Page title -->
+    <h1 class="h1 font-aspekta mb-5">Hi. I'm  
+        <a target="_blank" href="https://www.linkedin.com/in/joe-webb/" class="inline-flex relative text-sky-500 before:absolute before:inset-0 
+        before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 
+        before:-z-10 before:-rotate-2 before:translate-y-1/4">
+        Joe Webb, PhD</a> 🦾</h1>
+        <img src="{{ url_for('static', filename='joe.png') }}" width="200" height="200" alt="Joe" 
+        style="border-radius: 50%; width: 200px; 
+        height: 200px; object-fit: 
+        cover; object-position: top;" />
+        <br>
+
+    <!-- Page content -->
+    <div class="text-slate-500 dark:text-slate-400 space-y-8">
+        <div class="space-y-4">
+            <h2 class="h3 font-aspekta text-slate-800 dark:text-slate-100">About Me</h2>
+            <p>
+                I'm a CEO & Scientist with 10 years of experience in machine learning & 8 years running preclinical trials. I am the Founder of 
+                <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://www.vitalityrobotics.com">Vitality Robotics</a> 
+                where my team expedites biomedical breakthroughs using artificial intelligence and robotics.
+            </p>
+           
+        </div>
+        <div class="space-y-4">
+            <h2 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Vitality Robotics</h2>
+            <p>
+                At <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://www.vitalityrobotics.com">Vitality</a>, 
+                we partner with a variety of scientific companies automating their workflows using cloud-native technologies.
+            </p>
+            <p>
+                Our work involves developing and testing new machine learning applications, optimizing performance and security, and ensuring scientists can 
+                <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://www.vitalityrobotics.com">Digitze their lab</a>, 
+                
+                or automate workflows from data analysis 
+                <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://aws.amazon.com/blogs/industries/highlights-from-the-aws-life-sciences-executive-symposium-2023-accelerating-pharma-drug-discovery-with-machine-learning/">to drug discovery on AWS.</a> 
+                
+            </p>
+            <p>
+                As CEO, our team has designed 16 different SaaS applications for international scientific companies. From
+                <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://d1.awsstatic.com/whitepapers/compliance/Using_AWS_in_GxP_Systems.pdf">designing GxP systems on AWS</a> 
+                to 
+                <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://www.vitalityrobotics.com/s-projects-side-by-side">building the worlds first fully automated benchtop surgical devices for rodents</a>, 
+
+                we staff B2B contracts with principal AI developers to automate your custom workflows.
+            </p>
+        </div>
+        <div class="space-y-8">
+            <h2 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Vitality's Portfolio</h2>
+            <ul class="space-y-8">
+                <!-- Item -->
+                <li class="relative group">
+                    <div class="flex items-start before:absolute before:left-0 before:h-full before:w-px before:bg-slate-200 before:dark:bg-slate-800 before:self-start before:ml-[28px] before:-translate-x-1/2 before:translate-y-8 before:group-last-of-type:hidden">
+                        <div class="absolute left-0 h-14 w-14 flex items-center justify-center border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 bg-white dark:bg-slate-900 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#DE4D3B" d="M15.912 6.545h-7.75v3.273h4.393c-.702 2.182-2.437 2.91-4.428 2.91-2.12.002-3.992-1.368-4.601-3.37a4.693 4.693 0 0 1 1.959-5.307 4.854 4.854 0 0 1 5.722.33l2.414-2.265C10.947-.31 6.964-.69 3.867 1.186.771 3.06-.683 6.735.308 10.18c.99 3.445 4.185 5.822 7.819 5.82 4.477 0 8.525-2.91 7.785-9.456Z" />
+                            </svg>
+                        </div>
+                        <div class="pl-20 space-y-1">
+                            <div class="text-xs text-slate-500 uppercase">January 2024 <span class="text-slate-400 dark:text-slate-600">·</span> Present</div>
+                            <a class="h6 font-aspekta text-slate-800 dark:text-slate-100" target="_blank" href="https://www.labtools.ai">Labtools.AI</a> 
+                            <div class="text-sm text-slate-500 dark:text-slate-400">A customizable SaaS Platform built for scientists to automate data analysis, training custom machine learning models, and integrating with your digital lab.</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Additional portfolio items would go here -->
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h2 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Let's Connect</h2>
+            <p>
+                I'm excited to connect with others via <a class="font-medium text-sky-500 hover:underline" href="#0">email</a> and <a class="font-medium text-sky-500 hover:underline" href="#0">Twitter</a> to chat about projects and ideas. Currently, I'm not taking on freelance projects, but I am open to hearing about potential opportunities, discussing them with you and then potentially collaborating if it's a good fit.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

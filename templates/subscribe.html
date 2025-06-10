@@ -1,0 +1,20 @@
+
+{% extends "layout.html" %}
+
+{% block title %}Joe Webb, PhD - Subscribe{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="h1 font-aspekta mb-12">Subscribe to Updates</h1>
+    <div class="text-slate-500 dark:text-slate-400 space-y-8">
+        <p>Subscribe to get updates on new projects, blog posts, and more.</p>
+        <form>
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-2" for="email">Email Address</label>
+                <input id="email" type="email" class="form-input w-full" placeholder="your@email.com" />
+            </div>
+            <button class="btn text-slate-100 bg-sky-500 hover:bg-sky-600" type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
