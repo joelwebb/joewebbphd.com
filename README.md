@@ -37,9 +37,7 @@ This setup provides enterprise-level hosting capabilities at a fraction of tradi
 
 ### Dependencies
 
-* Python 3.6 or higher
-* Node.js and npm (for Tailwind CSS compilation)
-* Flask web framework
+* HTML & CSS
 * Modern web browser
 * AWS account (for deployment)
 
