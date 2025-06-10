@@ -35,7 +35,7 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             if [ -f "$file" ]; then
               echo "Uploading $file to S3"
-              aws s3 cp "$file" "s3://joewebbphd.com/$file" --cache-control "max-age=31536000"
+              aws s3 cp "$file" "s3://joewebbphd.com/$file" --acl public-read --cache-control "max-age=31536000"
             fi
           done
         else
