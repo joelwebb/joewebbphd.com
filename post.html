@@ -74,7 +74,7 @@
                                         <span class="sr-only">Blog</span>
                                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                             <path fill-opacity=".16" d="M2 4h16v12H2z" />
-                                            <path d="M3 3h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v10h12V5H4zm2 2h8v2H6V7zm0 3h8v2H6v-2zm0 3h5v2H6v-2z" />
+                                            <path d="M3 3h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1-1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v10h12V5H4zm2 2h8v2H6V7zm0 3h8v2H6v-2zm0 3h5v2H6v-2z" />
                                         </svg>
                                     </a>
                                 </li>
@@ -104,7 +104,7 @@
                             <div class="grow flex justify-end space-x-4">
 
                                 <!-- Search form -->
-                                
+
 
                                 <!-- Light switch -->
                                 <div class="flex flex-col justify-center ml-3">
@@ -180,105 +180,107 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <h1 class="h1 font-aspekta mb-4">How to Control CSS Animations with JavaScript</h1>
+                                        <h1 class="h1 font-aspekta mb-4">Downloads Are Free, AWS Is Cheap, Engineering Time Is Expensive</h1>
                                     </header>
                                     <!-- Post content -->
                                     <div class="text-slate-500 dark:text-slate-400 space-y-8">
                                         <p>
-                                            When it comes to animations on the web, developers need to measure the animation's requirements with the right technology -- CSS or JavaScript.
+                                            The democratization of AI has reached a fascinating inflection point. Open source models like DeepSeek, LLaMA, Mistral, and Code Llama are freely available for download. AWS makes hosting surprisingly affordable. Yet most organizations still struggle with the real bottleneck: <strong class="font-medium text-slate-800 dark:text-slate-100">engineering time and expertise</strong>.
                                         </p>
                                         <img class="w-full" src="./images/post-image.jpg" width="692" height="390" alt="Post" />
                                         <div class="space-y-4">
                                             <p>
-                                                Web designers sometimes believe that animating in CSS is more difficult than animating in JavaScript. <strong class="font-medium text-slate-800 dark:text-slate-100">While CSS animation does have some limitations</strong>, most of the time it's more capable than we give it credit for! Not to mention, typically more performant.
+                                                After deploying dozens of ML models for Fortune 500 companies, I've learned that the cost breakdown is never what clients expect. <strong class="font-medium text-slate-800 dark:text-slate-100">The models are free, hosting costs pennies per request</strong>, but orchestrating a production-ready system can consume months of engineering effort.
                                             </p>
                                             <p>
-                                                Coupled with a touch of JavaScript, CSS animations and transitions are able to accomplish hardware-accelerated animations and interactions more efficiently than most JavaScript libraries.
-                                                Let's jump straight in!
-                                            </p>
-                                            <p>
-                                                Let's jump straight in!
+                                                Let me break down the real economics of running your own AI infrastructure, and why most teams underestimate the hidden costs of going beyond a simple API call.
                                             </p>
                                         </div>
                                         <div class="space-y-4">
-                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">Manipulating CSS Transitions</h2>
+                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">The Free Part: Open Source Models</h2>
                                             <p>
-                                                There are countless questions on coding forums related to triggering and pausing an element's transition. The solution is actually quite simple using JavaScript.
+                                                The landscape of freely available models is staggering. DeepSeek-V3 rivals GPT-4 performance. LLaMA 3.1 runs efficiently on consumer hardware. Mistral 7B handles most business use cases. These models represent billions in R&D investment, available for the cost of bandwidth.
                                             </p>
                                             <p>
-                                                To trigger an element's transition, toggle a class name on that element that triggers it.
+                                                Download times vary from minutes to hours depending on model size. A 7B parameter model typically weighs 4-14GB. Larger models like DeepSeek-V3 can exceed 100GB. But storage is cheap - even the largest models cost <a class="font-medium text-sky-500 hover:underline" href="#0">under $3/month to store on S3</a>.
                                             </p>
                                             <p>
-                                                To pause an element's transition, use getComputedStyle and getPropertyValue at the point in the transition you want to pause it. <a class="font-medium text-sky-500 hover:underline" href="#0">Then set those CSS properties</a> of that element equal to those values you just got.
-                                            </p>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">Using CSS “Callback Functions”</h2>
-                                            <p>
-                                                Some of the most useful yet little-known JavaScript tricks for manipulating CSS transitions and animations are the DOM events they fire. Like: <strong class="font-medium text-slate-800 dark:text-slate-100">animationend, animationstart, and animationiteration for animations</strong> and transitionend for transitions. You might guess what they do. These animation events fire when the animation on an element ends, starts, or completes one iteration, respectively.
-                                            </p>
-                                            <p>
-                                                These events need to be vendor prefixed at this time, so in this demo, we use a function developed by Craig Buckler called PrefixedEvent, which has the parameters element, type, and callback to help make these events cross-browser. Here is his useful article on capturing CSS animations with JavaScript. And <a class="font-medium text-sky-500 hover:underline" href="#0">here is another one</a> determining which animation (name) the event is firing for.
+                                                The democratization is real. What once required a PhD and million-dollar budgets now requires a decent internet connection and some patience.
                                             </p>
                                         </div>
                                         <div class="space-y-4">
-                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">Manipulating CSS Transitions</h2>
+                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">The Cheap Part: AWS Hosting</h2>
                                             <p>
-                                                Like we just learned, we can watch elements and react to animation-related events: animationStart, animationIteration, and animationEnd. But what happens if you want to change the CSS animation mid-animation? This requires a bit of trickery!
+                                                Running inference on AWS EC2 is surprisingly affordable. A g4dn.xlarge instance with GPU acceleration costs around <strong class="font-medium text-slate-800 dark:text-slate-100">$0.526/hour</strong>. For a 7B model serving 100 requests/hour, that's roughly $0.005 per request for compute alone.
                                             </p>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">The animation-play-state Property</h3>
                                             <p>
-                                                The animation-play-state property of CSS is incredibly helpful when you simply need to pause an animation and potentially continue it later. You can change that CSS through JavaScript like this (mind your prefixes):
+                                                Here's a typical cost breakdown for a FastAPI deployment serving a 7B model:
                                             </p>
                                         </div>
 <pre class="overflow-x-auto text-sm text-slate-500 bg-slate-800 p-4 rounded leading-tight">
-<code class="font-pt-mono"><span class="text-sky-300">element</span>.<span class="text-sky-300">style</span>.<span class="text-sky-300">webkitAnimationPlayState</span> <span class="text-fuchsia-400">=</span> <span class="text-emerald-400">"paused"</span>;
+<code class="font-pt-mono"><span class="text-emerald-400"># Monthly costs for moderate usage (10K requests)</span>
+<span class="text-sky-300">EC2 g4dn.xlarge</span>: <span class="text-pink-400">$380</span> <span class="text-emerald-400"># 24/7 operation</span>
+<span class="text-sky-300">EBS Storage</span>: <span class="text-pink-400">$20</span>   <span class="text-emerald-400"># 200GB for models + OS</span>
+<span class="text-sky-300">Data Transfer</span>: <span class="text-pink-400">$5</span>    <span class="text-emerald-400"># Minimal for API responses</span>
+<span class="text-sky-300">Load Balancer</span>: <span class="text-pink-400">$18</span>   <span class="text-emerald-400"># Application Load Balancer</span>
 
-<span class="text-sky-300">element</span>.<span class="text-sky-300">style</span>.<span class="text-sky-300">webkitAnimationPlayState</span> <span class="text-fuchsia-400">=</span> <span class="text-emerald-400">"running"</span>;</code>
+<span class="text-sky-300">Total</span>: <span class="text-pink-400">~$423/month</span> <span class="text-emerald-400">or $0.042 per request</span></code>
 </pre>
                                         <div class="space-y-4">
-                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Obtaining the Current Keyvalue Percentage</h3>
                                             <p>
-                                                Unfortunately, at this time, there is no way to get the exact current “percentage completed” of a CSS keyframe animation. <strong class="font-medium text-slate-800 dark:text-slate-100">The best method to approximate it is using a setInterval function</strong> that iterates 100 times during the animation, which is essentially: the animation duration in ms / 100. For example, if the animation is 4 seconds long, then the setInterval needs to run every 40 milliseconds (4000/100).
+                                                Compare this to OpenAI's GPT-4 at $0.03 per 1K input tokens. For longer contexts, self-hosting becomes competitive quickly. But remember - this assumes your system is already built and running smoothly.
+                                            </p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">The Expensive Part: Engineering Reality</h2>
+                                            <p>
+                                                Here's where most cost estimates fall apart. Building a production-ready ML serving system isn't just about spinning up an EC2 instance and calling it a day. <strong class="font-medium text-slate-800 dark:text-slate-100">The operational complexity grows exponentially with requirements</strong>.
+                                            </p>
+                                            <p>
+                                                A senior ML engineer costs $150-200K annually. Factor in benefits, and you're looking at $200-250K total compensation. Even a modest 3-month project to build proper infrastructure represents $50-60K in engineering costs - before considering ongoing maintenance.
+                                            </p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">What "Production Ready" Actually Means</h3>
+                                            <p>
+                                                Your FastAPI server needs monitoring, logging, auto-scaling, health checks, model versioning, A/B testing capabilities, rate limiting, authentication, error handling, graceful shutdowns, and disaster recovery. Each requirement adds complexity.
                                             </p>
                                         </div>
 <pre class="overflow-x-auto text-sm text-slate-500 bg-slate-800 p-4 rounded leading-tight">
-<code class="font-pt-mono"><span class="text-sky-300">var showPercent</span> <span class="text-fuchsia-400">=</span> <span class="text-sky-300">window</span>.<span class="text-sky-300">setInterval</span>(<span class="text-emerald-400">function</span>() {
-
-  <span class="text-emerald-400">if</span> (<span class="text-sky-300">currentPercent</span> <span class="text-fuchsia-400">&lt;</span> <span class="text-pink-400">100</span>) {
-
-    <span class="text-sky-300">currentPercent</span> <span class="text-fuchsia-400">+=</span> <span class="text-pink-400">1</span>;
-
-  } <span class="text-emerald-400">else</span> {
-
-    <span class="text-sky-300">currentPercent</span> <span class="text-fuchsia-400">=</span> <span class="text-pink-400">0</span>;
-
-  }
-
-  // Updates a div that displays the current percent
-
-  <span class="text-sky-300">result</span>.<span class="text-sky-300">innerHTML</span> <span class="text-fuchsia-400">=</span> <span class="text-sky-300">currentPercent</span>;
-
-}, <span class="text-fuchsia-400">40</span>);</code>
+<code class="font-pt-mono"><span class="text-emerald-400"># What your architecture really needs</span>
+<span class="text-sky-300">API Gateway</span> → <span class="text-sky-300">Load Balancer</span> → <span class="text-sky-300">Auto Scaling Group</span>
+  ↓
+<span class="text-sky-300">Multiple EC2 instances</span> (<span class="text-emerald-400">redundancy</span>)
+  ↓  
+<span class="text-sky-300">Model Registry</span> (<span class="text-emerald-400">versioning</span>)
+<span class="text-sky-300">CloudWatch</span> (<span class="text-emerald-400">monitoring</span>)
+<span class="text-sky-300">DynamoDB</span> (<span class="text-emerald-400">usage tracking</span>)
+<span class="text-sky-300">S3</span> (<span class="text-emerald-400">model storage + logs</span>)
+<span class="text-sky-300">Lambda</span> (<span class="text-emerald-400">serverless orchestration</span>)</code>
 </pre>
                                         <div class="space-y-4">
-                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">Use Your Head</h2>
+                                            <h3 class="h3 font-aspekta text-slate-800 dark:text-slate-100">Usage Tracking: The Hidden Complexity</h3>
                                             <p>
-                                                Before starting to code, thinking about and planning how a transition or animation should run is the best way to minimize your problems and get the effect you desire. Even better than Googling for solutions later! The techniques and tricks overviewed in this article may not always be the best way to create the animation your project calls for.
-                                            </p>
-                                            <p>
-                                                Here's a little example of <strong class="font-medium text-slate-800 dark:text-slate-100">where getting clever with HTML and CSS</strong> alone can solve a problem where you might have thought to go to JavaScript.
+                                                API usage tracking seems simple until you need billing-grade accuracy. You need request logging, token counting, rate limiting per user, usage analytics, and audit trails. <strong class="font-medium text-slate-800 dark:text-slate-100">Each feature requires careful consideration of edge cases, error handling, and performance impact</strong>.
                                             </p>
                                         </div>
                                         <div class="space-y-4">
-                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">In Conclusion</h2>
+                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">Making the Build vs Buy Decision</h2>
+                                            <p>
+                                                The math is stark: for most organizations, the engineering effort to build proper AI infrastructure costs more than simply using hosted APIs for years. Build your own when you have specific requirements that hosted services can't meet, or when you're processing millions of requests monthly.
+                                            </p>
+                                            <p>
+                                                Here's my rule of thumb: <strong class="font-medium text-slate-800 dark:text-slate-100">if your monthly hosted API costs exceed $5K and you have dedicated ML infrastructure team</strong>, consider building. Otherwise, focus your engineering talent on your core business logic.
+                                            </p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h2 class="h2 font-aspekta text-slate-800 dark:text-slate-100">The Bottom Line</h2>
                                             <ul class="list-disc list-inside space-y-2">
-                                                <li>Developers used to need to choose between CSS and JavaScript.</li>
-                                                <li>In JavaScript, CSS transitions are generally easier to work with than CSS animations.</li>
-                                                <li>CSS Matrices are generally a pain to deal with, especially for beginners.</li>
-                                                <li>Thinking about what should be done and planning how to do it.</li>
+                                                <li>Open source models are genuinely free and increasingly powerful</li>
+                                                <li>AWS hosting costs are predictable and often cheaper than you'd expect</li>
+                                                <li>Engineering effort to build production systems is consistently underestimated</li>
+                                                <li>Start with hosted APIs, graduate to self-hosting when the economics make sense</li>
+                                                <li>Factor in total cost of ownership, not just compute costs</li>
                                             </ul>
                                         </div>
                                     </div>
