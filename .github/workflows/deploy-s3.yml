@@ -1,0 +1,49 @@
+
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+        aws-region: us-east-1
+    
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v39
+      
+    - name: Sync changed files to S3
+      run: |
+        if [ -n "${{ steps.changed-files.outputs.all_changed_files }}" ]; then
+          echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [ -f "$file" ]; then
+              echo "Uploading $file to S3"
+              aws s3 cp "$file" "s3://your-bucket-name/$file" --cache-control "max-age=31536000"
+            fi
+          done
+        else
+          echo "No files changed"
+        fi
+    
+    - name: Sync all files on first deploy
+      if: github.event_name == 'push' && github.event.before == '0000000000000000000000000000000000000000'
+      run: |
+        echo "First deploy - syncing all files"
+        aws s3 sync . s3://your-bucket-name --delete --cache-control "max-age=31536000" --exclude ".git/*" --exclude ".github/*" --exclude "node_modules/*" --exclude "*.md"
