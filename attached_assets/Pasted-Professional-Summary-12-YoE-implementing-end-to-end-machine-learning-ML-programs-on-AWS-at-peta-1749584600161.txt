@@ -1,0 +1,41 @@
+Professional Summary 
+● 12 YoE implementing end-to-end machine learning (ML) programs on AWS at petabyte scale
+● 6 YoE managing cross-functional remote, Agile ML teams designing ML tools using AWS SageMaker
+● Seasoned leader who has scaled ML tools from concept to commercialization, securing industry partnerships, grant funding, saving clients millions of dollars by migrating to AWS services
+● Kind, hard working team player who follows impact driven leadership who enjoys teaching others
+Work History 
+CEO & Founder – Vitality Robotics Inc 
+November 2022 - March 2025 | RTP North Carolina 
+● Recruited & directed cross functional teams of scientists & engineers implementing ML on AWS
+● Consulting for 16 clients implementing computer vision & natural language processing, generative AI tools ( AWS Nova, Claude, ChatGPT) or generative GANs models for life science applications
+● Created training materials/presentations for scientific conferences and external stakeholders
+● Collaborate with  clinicians,ML engineers & pharma partners to define research questions and develop machine learning solutions on AWS to create novel structured data from doctors notes
+● Co-authored research publications, & deployed clustering models to models on clinical data
+Senior Manager of Machine Learning - Verana Health 
+November 2021 - November 2022 | Remote 
+● Hired & directed two teams of machine learning engineers to design computer vision and 
+unstructured text analytics models using AWS  from >6000 hospitals analyzing 
+● Designed clinical trial matching software for patients using data from EHR, claims, public registries, and private pharma clinical trial datasets by migrating to AWS SageMaker saving $300K/month 
+● Architected & implemented a Jira ticket based automated data labeling system using SageMaker 
+Ground Truth & AWS S3 for doctors to label EHR data with HIPPA compliance 
+Senior Machine Learning Engineer - Maximus 
+February 2021 - November 2021 | Remote 
+● Lead a team of 8 engineers reporting to VP of Engineering & started AI community of practice 
+● Taught MLops workshops once per week and worked with government clients to assess AI 
+opportunities and provide strategic recommendations for the USCIS & DHS
+● Designed ML models for schema matching, forecasting, and chatbots for medicare/medicade
+Senior Machine Learning Engineer - Attain LLC  (acquired by Maximus)
+April 2020 - February 2021 | Remote  
+● Designed serverless applications using DynamoDB, Lambda, API Gateway & Cloudfront to 
+run de-duplication workloads for USCIS & DHS using TB scale event driven services
+● Trained ML models using AWS SageMaker for biometric identification & automatic reporting tools
+● Used OCR to automate document processing and designed computer vision models for drivers license recognition
+● Provide guidance on implementing new AI tools, data governance, regulatory compliance for governmental and commercial clients 
+CEO & Founder - Thoughsuite Consulting Services 
+January 2017 - December 2020 | Remote 
+● Provided consulting services to biotech, fintech and business executives to design custom machine learning software 
+● Provided data management and data governance consulting services to companies following the DCAM & DMM Frameworks 
+● Trained computer vision models to automate tasks in the laboratory & designed digital pathology platform for the AMVC
+NSF GRFP PHD Fellow - Iowa State University 
+August 2016 - May 2020 | Ames, Iowa 
+● Lead a team of 33 undergraduate students processing Neuroimages on SLURM clusters & whole genome sequencing data for TB data.
