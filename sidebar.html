@@ -1,4 +1,5 @@
 
+
 <!-- Side navigation -->
 <div class="sticky top-0 w-16 md:w-24 shrink-0 h-screen overflow-y-auto no-scrollbar border-r border-slate-200 dark:border-slate-800">
     <div class="h-full flex flex-col justify-between after:flex-1 after:mt-auto">
@@ -13,7 +14,7 @@
             <nav class="w-full">
                 <ul class="space-y-4">
                     <li class="py-2">
-                        <a class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="index.html">
+                        <a id="nav-home" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="index.html">
                             <span class="sr-only">Home</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="21" height="19">
                                 <path fill-opacity=".16" d="M4 7v11h13V7l-6.5-5z" />
@@ -22,8 +23,8 @@
                         </a>
                     </li>
                     <li class="py-2">
-                        <a class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="blog.html">
-                            <span class="sr-only">About</span>
+                        <a id="nav-blog" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="blog.html">
+                            <span class="sr-only">Blog</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                 <path fill-opacity=".16" d="M10 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Z" />
                                 <path d="M9 5h2v2H9V5Zm0 4h2v6H9V9Zm1-9C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0Zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Z" />
@@ -31,7 +32,7 @@
                         </a>
                     </li>
                     <li class="py-2">
-                        <a class="text-sky-500 w-full h-6 flex items-center justify-center relative after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 after:bg-sky-500" href="projects.html">
+                        <a id="nav-projects" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="projects.html">
                             <span class="sr-only">Projects</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                 <path fill-opacity=".16" d="M1 4h18v10H1z" />
@@ -40,7 +41,7 @@
                         </a>
                     </li>
                     <li class="py-2">
-                        <a class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="resume.html">
+                        <a id="nav-resume" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="resume.html">
                             <span class="sr-only">Resume</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="20">
                                 <path fill-opacity=".16" fill-rule="nonzero" d="M1 5h16v14H1z" />
@@ -49,7 +50,7 @@
                         </a>
                     </li>
                     <li class="py-2">
-                        <a class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="blog.html">
+                        <a id="nav-post" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="blog.html">
                             <span class="sr-only">Blog</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                 <path fill-opacity=".16" d="M2 4h16v12H2z" />
@@ -58,7 +59,7 @@
                         </a>
                     </li>
                     <li class="py-2">
-                        <a class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="subscribe.html">
+                        <a id="nav-subscribe" class="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center" href="subscribe.html">
                             <span class="sr-only">Subscribe</span>
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="21" height="21">
                                 <path fill-opacity=".16" d="m13.4 18-3-7.4-7.4-3L19 2z" />
@@ -71,3 +72,41 @@
         </div>
     </div>
 </div>
+
+<script>
+// Set active navigation item based on current page
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Remove active classes from all nav items
+    const allNavItems = document.querySelectorAll('[id^="nav-"]');
+    allNavItems.forEach(item => {
+        item.className = 'text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 w-full h-6 flex items-center justify-center';
+    });
+    
+    // Set active class based on current page
+    let activeNavId = '';
+    
+    if (currentPage === 'index.html' || currentPage === '') {
+        activeNavId = 'nav-home';
+    } else if (currentPage === 'blog.html') {
+        activeNavId = 'nav-blog';
+    } else if (currentPage === 'projects.html') {
+        activeNavId = 'nav-projects';
+    } else if (currentPage === 'resume.html') {
+        activeNavId = 'nav-resume';
+    } else if (currentPage === 'post.html') {
+        activeNavId = 'nav-post';
+    } else if (currentPage === 'subscribe.html' || currentPage === 'success.html') {
+        activeNavId = 'nav-subscribe';
+    }
+    
+    if (activeNavId) {
+        const activeNav = document.getElementById(activeNavId);
+        if (activeNav) {
+            activeNav.className = 'text-sky-500 w-full h-6 flex items-center justify-center relative after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 after:bg-sky-500';
+        }
+    }
+});
+</script>
+
