@@ -102,7 +102,7 @@
                                             </ul>
                                             <div>
                                                 <!-- Subscribe form -->
-                                                <form method="POST" action="https://script.google.com/macros/s/AKfycbx-YITB6pZivfS3N1fGKLpqGkjhlVphMGjDRVciK4boovwaSLgOdPFAZWVQMhzoPip8tQ/exec">
+                                                <form id="subscribeForm" method="POST" action="https://script.google.com/macros/s/AKfycbx-YITB6pZivfS3N1fGKLpqGkjhlVphMGjDRVciK4boovwaSLgOdPFAZWVQMhzoPip8tQ/exec">
                                                     <div class="flex flex-col md:flex-row justify-center max-w-xs mx-auto md:max-w-md md:mx-0">
                                                         <input name="Email" type="email" class="form-input w-full mb-2 md:mb-0 md:mr-2" placeholder="Your email" aria-label="Your email…" required />
                                                         <button type="submit" class="btn text-white bg-sky-500 hover:bg-sky-600">Subscribe</button>
@@ -110,6 +110,22 @@
                                                     <!-- Success message -->
                                                     <!-- <p class="text-xs text-slate-500 mt-3 italic">Thanks for subscribing!</p> -->
                                                 </form>
+
+                                                <!-- Human Verification Modal -->
+                                                <div id="humanModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                                                    <div class="bg-white dark:bg-slate-800 p-6 rounded-lg max-w-md mx-4">
+                                                        <h3 class="text-lg font-aspekta font-[650] mb-4">Human Verification</h3>
+                                                        <p class="text-slate-600 dark:text-slate-400 mb-4">Please confirm you are human before subscribing.</p>
+                                                        <div class="flex items-center mb-6">
+                                                            <input type="checkbox" id="humanCheck" class="form-checkbox mr-3">
+                                                            <label for="humanCheck" class="text-sm">I am human</label>
+                                                        </div>
+                                                        <div class="flex space-x-3">
+                                                            <button id="confirmHuman" class="btn text-white bg-sky-500 hover:bg-sky-600 disabled:opacity-50" disabled>Confirm</button>
+                                                            <button id="cancelModal" class="btn text-slate-600 bg-slate-200 hover:bg-slate-300">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="flex items-center mt-5">
                                                     <div class="inline-flex -space-x-3 -ml-0.5">
                                                         <img class="rounded-full border-2 border-white dark:border-slate-800 box-content" src="./images/avatar-01.jpg" width="24" height="24" alt="Avatar 01">
@@ -218,6 +234,53 @@
             .catch(error => {
                 console.error('Error loading footer:', error);
             });
+
+        // Human verification modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('subscribeForm');
+            const modal = document.getElementById('humanModal');
+            const checkbox = document.getElementById('humanCheck');
+            const confirmBtn = document.getElementById('confirmHuman');
+            const cancelBtn = document.getElementById('cancelModal');
+            let formData = null;
+
+            // Intercept form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formData = new FormData(form);
+                modal.classList.remove('hidden');
+            });
+
+            // Enable/disable confirm button based on checkbox
+            checkbox.addEventListener('change', function() {
+                confirmBtn.disabled = !checkbox.checked;
+            });
+
+            // Handle confirm button
+            confirmBtn.addEventListener('click', function() {
+                if (checkbox.checked) {
+                    modal.classList.add('hidden');
+                    // Submit the form
+                    form.submit();
+                }
+            });
+
+            // Handle cancel button
+            cancelBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                checkbox.checked = false;
+                confirmBtn.disabled = true;
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    checkbox.checked = false;
+                    confirmBtn.disabled = true;
+                }
+            });
+        });
     </script>
 
 </body>
