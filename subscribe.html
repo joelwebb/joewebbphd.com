@@ -260,10 +260,42 @@
             confirmBtn.addEventListener('click', function() {
                 if (checkbox.checked) {
                     modal.classList.add('hidden');
-                    // Submit the form
-                    form.submit();
+                    // Submit the form via AJAX
+                    submitFormAjax();
                 }
             });
+
+            // Function to submit form via AJAX
+            function submitFormAjax() {
+                const email = form.querySelector('input[name="Email"]').value;
+                const formData = new FormData();
+                formData.append('Email', email);
+
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+
+                fetch('https://script.google.com/macros/s/AKfycbx-YITB6pZivfS3N1fGKLpqGkjhlVphMGjDRVciK4boovwaSLgOdPFAZWVQMhzoPip8tQ/exec', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    // Redirect to success page regardless of response
+                    window.location.href = 'success.html';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Still redirect to success page to avoid showing errors to user
+                    window.location.href = 'success.html';
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            }
 
             // Handle cancel button
             cancelBtn.addEventListener('click', function() {

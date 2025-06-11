@@ -286,3 +286,140 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Joe Webb, PhD - Subscription Confirmed</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
+            document.querySelector('html').classList.remove('dark');
+        } else {
+            document.querySelector('html').classList.add('dark');
+        }
+    </script>    
+</head>
+
+<body class="font-inter antialiased bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-200 tracking-tight">
+
+    <div class="max-w-7xl mx-auto">
+        <div class="min-h-screen flex">
+
+            <!-- Side navigation -->
+            <div id="sidebar-container"></div>
+
+            <!-- Main content -->
+            <main class="grow overflow-hidden px-6">
+                <div class="w-full h-full max-w-[1072px] mx-auto flex flex-col">
+
+                    <!-- Header -->
+                    <header>
+                        <div class="flex items-center justify-between h-16 before:block">
+
+                            <div class="grow flex justify-end space-x-4">
+
+                                <!-- Light switch -->
+                                <div class="flex flex-col justify-center ml-3">
+                                    <input type="checkbox" name="light-switch" id="light-switch" class="light-switch sr-only" />
+                                    <label class="relative cursor-pointer p-2" for="light-switch">
+                                        <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                                            <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                                        </svg>
+                                        <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                                            <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                                        </svg>
+                                        <span class="sr-only">Switch to light / dark version</span>
+                                    </label>
+                                </div>
+
+                                <!-- Button -->
+                                <div>
+                                    <a class="btn-sm text-slate-100 bg-sky-500 hover:bg-sky-600" href="subscribe.html">Subscribe</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </header>
+
+                    <!-- Content -->
+                    <div class="grow md:flex space-y-8 md:space-y-0 md:space-x-8 pt-12 md:pt-16 pb-16 md:pb-20">
+
+                        <!-- Middle area -->
+                        <div class="grow">
+                            <div class="max-w-[700px]">
+
+                                <div class="space-y-10">
+
+                                    <section>
+                                        <!-- Page title -->
+                                        <h1 class="h1 font-aspekta mb-5">Thank you for subscribing! 🎉</h1>
+                                        <!-- Page content -->
+                                        <div class="text-slate-500 dark:text-slate-400 space-y-8">
+                                            <p class="text-lg">Your subscription has been confirmed successfully. You'll receive updates about AI projects, machine learning insights, and startup journey directly in your inbox.</p>
+                                            
+                                            <div class="flex items-center space-x-4">
+                                                <svg class="w-12 h-12 fill-current text-green-500" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4zm-4 30L10 24l2.828-2.828L20 28.344l15.172-15.172L38 16 20 34z"/>
+                                                </svg>
+                                                <div>
+                                                    <h3 class="font-aspekta font-[650] text-slate-800 dark:text-slate-100 mb-1">Subscription Confirmed</h3>
+                                                    <p class="text-sm">Welcome to the community of AI enthusiasts and builders!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex space-x-4">
+                                                <a class="btn text-white bg-sky-500 hover:bg-sky-600" href="index.html">Back to Home</a>
+                                                <a class="btn text-slate-600 bg-slate-200 hover:bg-slate-300 dark:text-slate-400 dark:bg-slate-700 dark:hover:bg-slate-600" href="blog.html">Read Latest Posts</a>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div id="footer-container"></div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/main.js"></script>
+    <script>
+        // Load sidebar component
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading sidebar:', error);
+            });
+        
+        // Load footer component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+
+</body>
+
+</html>
