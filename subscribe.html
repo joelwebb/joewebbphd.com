@@ -212,6 +212,15 @@
         </div>
     </div>
 
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+    </style>
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/main.js"></script>
     <script>
@@ -277,6 +286,19 @@
                 submitBtn.textContent = 'Submitting...';
                 submitBtn.disabled = true;
 
+                // Add spinning icons to benefit list
+                const benefitItems = document.querySelectorAll('.space-y-4 li');
+                benefitItems.forEach(item => {
+                    const checkIcon = item.querySelector('svg');
+                    if (checkIcon) {
+                        checkIcon.style.display = 'none';
+                        const spinningIcon = document.createElement('div');
+                        spinningIcon.className = 'spinning-icon w-3 h-3 mr-3 mt-1.5 shrink-0';
+                        spinningIcon.innerHTML = '<svg class="animate-spin text-sky-500" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+                        checkIcon.parentNode.insertBefore(spinningIcon, checkIcon);
+                    }
+                });
+
                 fetch('https://script.google.com/macros/s/AKfycbx-YITB6pZivfS3N1fGKLpqGkjhlVphMGjDRVciK4boovwaSLgOdPFAZWVQMhzoPip8tQ/exec', {
                     method: 'POST',
                     body: formData
@@ -294,6 +316,14 @@
                     // Reset button state
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
+                    
+                    // Remove spinning icons and restore check icons
+                    const spinningIcons = document.querySelectorAll('.spinning-icon');
+                    spinningIcons.forEach(icon => icon.remove());
+                    const checkIcons = document.querySelectorAll('.space-y-4 li svg');
+                    checkIcons.forEach(icon => {
+                        icon.style.display = 'block';
+                    });
                 });
             }
 
